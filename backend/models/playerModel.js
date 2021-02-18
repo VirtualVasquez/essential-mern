@@ -8,7 +8,7 @@ export const PlayerSchema = new Schema({
         type: String,
         required: true
     },
-    lasttName: {
+    lastName: {
         type: String,
         required: true
     },
@@ -18,7 +18,6 @@ export const PlayerSchema = new Schema({
     },
     phone: {
         type: Number,
-        required: true
     },
     iscoach: {
         type: Boolean,
