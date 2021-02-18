@@ -1,7 +1,8 @@
 import {
         addNewPlayer, 
         getPlayers,
-        getPlayerWithID
+        getPlayerWithID,
+        UpdatePlayer
     } from '../controllers/playerControllers';
 
 //variable that holds routes
@@ -13,8 +14,11 @@ const routes = (app) =>{
     //POST endpoint
         .post(addNewPlayer);
     
-    app.route('/players/:PlayerId')
+    app.route('/player/:PlayerId')
+        //Get specific player
         .get(getPlayerWithID)
+        //Update specific player
+        .put(UpdatePlayer)
 
 }
 

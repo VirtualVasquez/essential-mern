@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 //this syntax connects us
 mongoose.connect('mongodb://localhost/soccerDB', {
     useNewUrlParser:true,
-    useUnifiedToplogy: true
+    useUnifiedTopology: true
 });
 
 // bodyparser setup
