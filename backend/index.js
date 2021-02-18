@@ -1,10 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyparser from 'body-parser';
+import cors from 'cors';
 import routes from './routes/soccerRoutes';
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 
 //mongo connection
 //this allows us to use a promise to connect to mongo
@@ -20,6 +21,8 @@ mongoose.connect('mongodb://localhost/soccerDB', {
 app.use(bodyparser.urlencoded({extended: true}))//this allows us to pass the request and encoded it properly to use it
 app.use(bodyparser.json());
 
+//CORS setup
+app.use(cors()) 
 
 routes(app);
 
