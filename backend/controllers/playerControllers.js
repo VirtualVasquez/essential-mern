@@ -51,7 +51,7 @@ export const UpdatePlayer = (req, res) => {
 
 export const deletePlayer = (req, res) => {
     //we're finding the player first, then pass the data in the body we want to update
-    Player.remove({_id:req.params.PlayerId}, (err, Player)=>{
+    Player.deleteOne({_id:req.params.PlayerId}, (err, Player)=>{
         if (err){
             res.send(err);
         }
