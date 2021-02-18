@@ -1,4 +1,8 @@
-import {addNewPlayer, getPlayers} from '../controllers/playerControllers';
+import {
+        addNewPlayer, 
+        getPlayers,
+        getPlayerWithID
+    } from '../controllers/playerControllers';
 
 //variable that holds routes
 //// it will need to be passed into the index
@@ -8,6 +12,10 @@ const routes = (app) =>{
         .get(getPlayers)
     //POST endpoint
         .post(addNewPlayer);
+    
+    app.route('/players/:PlayerId')
+        .get(getPlayerWithID)
+
 }
 
 export default routes;
